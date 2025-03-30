@@ -1,0 +1,16 @@
+.friendCard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.online {
+    color: #15c220;
+}
+
+.offline {
+    color: #fc0000;
+}

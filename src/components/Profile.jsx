@@ -1,13 +1,7 @@
 import styles from './Profile.module.css';
 
-export default function Profile({ userData }) {
-  const {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  } = userData;
+export default function Profile({ username, tag, location, avatar, stats }) {
+  const { followers, views, likes } = stats;
   return (
     <div className={styles.card}>
       <div className={styles.mainInfo}>
@@ -17,18 +11,18 @@ export default function Profile({ userData }) {
         <p className={styles.location}>{location}</p>
       </div>
 
-      <ul className={styles.cardStats}>
-        <li className={styles.cardStatsLi}>
-          <span>Followers</span>
-          <span>1000</span>
+      <ul className={styles.stats}>
+        <li className={styles.statItem}>
+          <span className={styles.statTitle}>Followers</span>
+          <span className={styles.statValue}>{followers}</span>
         </li>
-        <li className={styles.cardStatsLi}>
-          <span>Views</span>
-          <span>2000</span>
+        <li className={styles.statItem}>
+          <span className={styles.statTitle}>Views</span>
+          <span className={styles.statValue}>{views}</span>
         </li>
-        <li className={styles.cardStatsLi}>
-          <span>Likes</span>
-          <span>3000</span>
+        <li className={styles.statItem}>
+          <span className={styles.statTitle}>Likes</span>
+          <span className={styles.statValue}>{likes}</span>
         </li>
       </ul>
     </div>

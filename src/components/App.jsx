@@ -1,13 +1,15 @@
 import Profile from './Profile.jsx';
 import userData from '../userData.json';
-import './Profile.module.css';
+import friends from '../friends.json';
+import FriendList from './FriendList.jsx';
 
-function MyApp() {
+function App() {
   return (
     <div>
-      <Profile userData={userData} />
+      <Profile {...userData} />
+      <FriendList friends={friends} />
     </div>
   );
 }
 
-export default MyApp;
+export default App;
