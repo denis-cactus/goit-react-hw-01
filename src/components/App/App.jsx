@@ -1,7 +1,7 @@
-import Profile from './Profile.jsx';
-import userData from '../userData.json';
-import friends from '../friends.json';
-import FriendList from './FriendList.jsx';
+import Profile from '../Profile/Profile.jsx';
+import userData from '../../data/userData.json';
+import friends from '../../data/friends.json';
+import FriendList from '../FriendList/FriendList.jsx';
 import styles from './App.module.css';
 
 function App() {
